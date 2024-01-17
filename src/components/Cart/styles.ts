@@ -25,7 +25,6 @@ export const CartProductsList = styled.ul`
     list-style-type: none;
 `;
 export const CartProductItem = styled.section`
-    background-color: green;
     margin: 0.5rem 0;
     
     width: 100%;
@@ -65,5 +64,4 @@ export const FooterCart = styled.footer`
     display: flex;
     align-items: center;
 
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25);
 `
