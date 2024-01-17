@@ -14,8 +14,6 @@ const initicialState: CartState = {
 }
 
 export function cartReducer(state = initicialState, action: CartAction) {
-    console.log('state', state)
-    console.log('action', action)
     switch(action.type){
         case 'cart/add-product':
             return {

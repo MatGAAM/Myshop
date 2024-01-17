@@ -15,7 +15,6 @@ export const ProductList: React.FC = () => {
       setResponseData(response.data)
     }
     getProducts()
-    console.log(responseData)
 
   }, [])
     
