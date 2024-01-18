@@ -6,7 +6,7 @@ import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import * as S from "./styles"
 import { Product } from "../../data/products";
 import { useDispatch, useSelector } from "react-redux";
-import { RootReducer, rootReducer } from "../../redux/root-reducer";
+import { RootReducer } from "../../redux/root-reducer";
 import { addProduct, removeProduct } from "../../redux/Cart/cart-slice";
 
 

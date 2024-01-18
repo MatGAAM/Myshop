@@ -4,7 +4,9 @@ import * as S from './styles'
 import { useDispatch } from "react-redux";
 import { removeProduct } from "../../redux/Cart/cart-slice";
 import { Product } from "../../data/products";
-import { MdArrowForward } from "react-icons/md";
+import { MdArrowForward, MdOutlineCancel } from "react-icons/md";
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
+
 
 interface CartProps {
     showCart: boolean,
@@ -33,7 +35,15 @@ export const Cart: React.FC<CartProps> = ({showCart, cart, fnSetShowCart}) => {
                     cart.map(product => (
                         <S.CartProductItem>
                             <S.CartProductTitle key={product.id}>{product.title}</S.CartProductTitle>
-                            <S.RemoveButton onClick={() => dispatch(removeProduct(product))}>Remover</S.RemoveButton>
+                            <S.ContainerButtonRemove>
+                                <S.Review>
+                                    { Array.from({ length: 5 }).map((_, index) => index < Math.round(product.rating.rate) ? <AiFillStar key={index} /> : <AiOutlineStar key={index}/>) }
+                                </S.Review>
+                                <S.Price>R${product.price}</S.Price>
+                            </S.ContainerButtonRemove>
+                            <S.WrapperButtonRemove>
+                                <S.RemoveButton onClick={() => dispatch(removeProduct(product))}><MdOutlineCancel /></S.RemoveButton>
+                            </S.WrapperButtonRemove>
                         </S.CartProductItem>
                     ))
                 }

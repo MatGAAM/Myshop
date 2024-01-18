@@ -88,11 +88,12 @@ export const RemoveFromCardButton = styled.button`
     border-radius: 5px;
     height: 40px;
     width: 100%;
-    background-color: violet;
-    color: black;
+    background-color: red;
+    color: white;
 
     svg {
         font-size: 0.7rem;
+        color: white;
     }
 `
 export const WrapperFooterCard = styled.footer`
